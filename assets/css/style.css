@@ -62,8 +62,6 @@ a {
 
 h1, h2 {
     font-weight: 300;
-    line-height: 1.2;
-    margin: 1rem 0;
 }
 
 h1 {
@@ -72,7 +70,7 @@ h1 {
 
 p {
     margin: 1rem 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 img {
@@ -96,7 +94,6 @@ img {
     /* background-color: var(--color-grey-dark-1); */
     /* box-shadow: 0 2rem 6rem rgba(0,0,0,.3); */
     min-height: 100vh;
-    padding: 0 3rem;
 }
 
 .container-full {
@@ -208,6 +205,83 @@ img {
 }
 
 .content {
+    padding: 0 3rem;
+}
+
+/* SECTIONS */
+
+.seperator {
+    /* height: 3rem; */
+}
+
+.home {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.home__title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.home__lead {
+    font-size: 2rem;
+    max-width: 50rem;
+    margin-bottom: 2rem;
+}
+
+.home__text {
+    font-size: 1.8rem;
+}
+
+.home__left {
+    width: 60%;
+    padding: 3rem 0;
+}
+
+.home__right {
+    /* background: pink; */
+    width: 30%;
+    padding: 3rem 0;
+}
+
+.home__image {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__image img {
+    max-width: 20rem;
+}
+
+.slide-container {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.slide {
+   width: 100%;
+   height: 100%;
+}
+
+.slide__text {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slide__text p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
 
 }
 
@@ -261,10 +335,16 @@ img {
 
 .footer__link:hover .contact__icon {
     fill: var(--color-grey-light-4);
+    transform: rotate(5deg);
 }
 
 .footer__social {
     margin-top: auto;
+}
+
+.footer__social  a .contact__icon:hover {
+    transform: translateY(-.5rem);
+    fill: var(--color-grey-light-4);
 }
 
 .contact__icon {
@@ -272,6 +352,7 @@ img {
     width: 2rem;
     height: 2rem;
     margin-right: 1rem;
+    transition: all .3s ease-out;
 }
 
 /* Scroll */
@@ -303,9 +384,29 @@ img {
 
 .scroll-top:hover {
     background-color: rgba(0,0,0,.2);
+    transform: scale(1.1);
+    border: 1px solid var(--color-grey-light-4);
 }
 
 .scroll-top__icon {
     fill: var(--color-grey-dark-4);
     width: 40%;
+}
+
+/* ANIMATIONS */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 4.5s;
+    animation-name: fade;
+    animation-duration: 4.5s;
+}
+
+@-webkit-keyframes fade {
+    from { opacity: .3 }
+    to { opacity: 1 }
+}
+
+@keyframes fade {
+    from { opacity: .3 }
+    to { opacity: 1 }
 }
